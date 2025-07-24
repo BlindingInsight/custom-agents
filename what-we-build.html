@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What We Build | Startup Starters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <section class="page-header">
+    <h1>What We Build</h1>
+    <p>Not another chatbot. Not another dashboard. These are custom AI products built for enterprise speed, scale, and complexity.</p>
+  </section>
+
+  <section class="content">
+    <h2>Internal Agents & Copilots</h2>
+    <p>We build generative AI agents tailored to your workflows — not generic chatbots. From summarizing legal documents to synthesizing customer feedback or generating pricing briefs, we create agents that work like internal experts with access to context, memory, and tools.</p>
+
+    <h2>Modular GenAI Platforms</h2>
+    <p>Your org doesn’t need a hundred tools that don’t talk to each other. We help you build one AI-native platform that adapts to each department and use case, with shared architecture and interfaces that drive consistency and reuse.</p>
+
+    <h2>RAG + Workflow Systems</h2>
+    <p>Our platforms use Retrieval Augmented Generation (RAG) and multi-agent workflows to connect unstructured data with real-time business decisions. These are not static prompts — they are context-aware, logic-driven, and deeply integrated with your operations.</p>
+
+    <h2>Proof of Concept in Days</h2>
+    <p>We don’t ask for a six-month discovery project. You bring the problem, we bring the engineers. Together we ship a working prototype — fast. You evaluate based on results, not promises.</p>
+
+    <h2>Custom, Compliant, Production-Grade</h2>
+    <p>We build your solution, on your infra, with your security requirements. From API integrations to audit logs to role-based access control, we ship production-grade software — not experiments.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Startup Starters | <a href="https://github.com/BlindingInsight/startupstarters" target="_blank">GitHub</a></p>
+  </footer>
+</body>
+</html>
