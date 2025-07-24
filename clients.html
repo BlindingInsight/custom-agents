@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who We Work With | Startup Starters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <section class="page-header">
+    <h1>Who We Work With</h1>
+    <p>If you have real pain and want real software — we’re your people.</p>
+  </section>
+
+  <section class="content">
+    <h2>Our Ideal Partners</h2>
+    <ul>
+      <li>Executives or business leaders with urgent, high-impact problems</li>
+      <li>Operators who have tried vendors, consultants, or internal teams without success</li>
+      <li>Decision-makers ready to experiment fast and co-build with us</li>
+      <li>Teams that want to own the outcome — not outsource the problem</li>
+    </ul>
+
+    <h2>What You Won’t Get</h2>
+    <ul>
+      <li>No decks. No buzzwords. No frameworks for frameworks.</li>
+      <li>No off-the-shelf products. No generic chatbots. No “labs.”</li>
+      <li>No seven-figure retainers. Just a working prototype, fast.</li>
+    </ul>
+
+    <h2>You Might Be a Fit If...</h2>
+    <p>You're a VP, SVP, or CxO in Operations, Technology, Strategy, or Transformation. You're frustrated by slow internal teams or unclear vendor roadmaps. You have something urgent you wish “someone would just build already.”</p>
+
+    <h2>Who We're Not For</h2>
+    <ul>
+      <li>If you want a strategy deck to convince your board</li>
+      <li>If your team’s just experimenting with AI for fun</li>
+      <li>If success means a press release, not a working solution</li>
+    </ul>
+
+    <p>We like working with people who are impatient to ship — and tired of hearing no.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Startup Starters | <a href="https://github.com/BlindingInsight/startupstarters" target="_blank">GitHub</a></p>
+  </footer>
+</body>
+</html>
