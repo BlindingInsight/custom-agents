@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start With a PoC | Startup Starters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <section class="page-header">
+    <h1>Start With a PoC</h1>
+    <p>No obligation. No sales pitch. Just working software.</p>
+  </section>
+
+  <section class="content">
+    <h2>Our Zero-Risk Offer</h2>
+    <p>You bring the problem. We co-design and co-build a working proof-of-concept with you — for free. No obligation to continue. No contract until you’ve seen something real. We want to work with teams who value action, not just intention.</p>
+
+    <h2>How It Works</h2>
+    <ol>
+      <li><strong>Intro Call:</strong> You share your biggest pain point. We listen, challenge, and clarify.</li>
+      <li><strong>Rapid Design:</strong> In 3–5 days, we sketch an architecture and map dependencies.</li>
+      <li><strong>Co-Build:</strong> We build the first working version together — real workflows, real outputs.</li>
+      <li><strong>Decision Time:</strong> You decide if we continue. No pressure. No lock-in.</li>
+    </ol>
+
+    <h2>Why We Do It This Way</h2>
+    <p>Because enterprise AI isn’t a sales cycle. It’s a partnership. Our best work comes when both sides roll up their sleeves and build. And frankly, we only want to work with people who are ready to ship.</p>
+
+    <p><a class="cta" href="contact.html">Start Your PoC</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Startup Starters | <a href="https://github.com/BlindingInsight/startupstarters" target="_blank">GitHub</a></p>
+  </footer>
+</body>
+</html>
