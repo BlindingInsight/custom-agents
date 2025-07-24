@@ -153,19 +153,31 @@ footer a:hover {
 
 .contact-form input,
 .contact-form textarea {
+  background-color: #ffffff; /* explicitly white */
+  color: #1a1a1a; /* deep gray text */
+  border: 1px solid #ccc;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  width: 100%;
+  margin-top: 0.25rem;
   border-radius: 5px;
-  resize: vertical;
+  box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+  opacity: 1;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: #d4af37;
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+  background-color: #ffffff; /* prevent dark inversion */
+  color: #1a1a1a;
 }
 
 .contact-form .cta {
