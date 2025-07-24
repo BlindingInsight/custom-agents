@@ -27,8 +27,6 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #0d0d0d;
-  color: #f8f8f6;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +35,6 @@ body {
 }
 
 .navbar nav a {
-  color: #f8f8f6;
   margin-left: 1.5rem;
   text-decoration: none;
   font-weight: 500;
