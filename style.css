@@ -243,6 +243,23 @@ footer a:hover {
   footer a {
     color: #ffd700;
   }
+
+.navbar,
+.navbar nav a,
+.hero h1,
+.hero p,
+.page-header h1,
+.content,
+.content h2,
+footer,
+footer a {
+  color: #f0f0f0 !important;
+}
+
+.navbar {
+  background-color: #1a1a1a !important;
+}
+  
 }
 
 /* Responsive */
