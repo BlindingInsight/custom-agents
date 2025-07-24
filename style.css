@@ -1,28 +1,18 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;500;700&display=swap');
 
+/* Base light mode styles */
 html, body {
   background-color: #f8f8f6 !important;
   color: #1a1a1a !important;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button,
-.content,
-.tile,
-.hero,
-footer,
-.navbar {
-  background-color: #ffffff !important;
-  color: #1a1a1a !important;
-}
-
-body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f8f6;
-  color: #1a1a1a;
   line-height: 1.6;
+}
+
+body, .hero, .content, .tile, .navbar, footer, .contact-form input, .contact-form textarea, .contact-form button {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
 }
 
 /* Navbar */
@@ -35,6 +25,7 @@ body {
 }
 
 .navbar nav a {
+  color: #1a1a1a;
   margin-left: 1.5rem;
   text-decoration: none;
   font-weight: 500;
@@ -53,7 +44,6 @@ body {
 .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background-color: #ffffff;
 }
 
 .hero h1 {
@@ -96,13 +86,11 @@ body {
   flex: 1;
   min-width: 250px;
   margin: 1rem;
-  background-color: #ffffff;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
   font-weight: 500;
-  color: #1a1a1a;
 }
 
 /* Page Headers */
@@ -124,7 +112,6 @@ body {
   margin: 0 auto;
   padding: 2rem;
   font-size: 1.1rem;
-  color: #1a1a1a;
 }
 
 .content h2 {
@@ -146,8 +133,8 @@ body {
 
 /* Footer */
 footer {
-  background-color: #222;
-  color: #ccc;
+  background-color: #222 !important;
+  color: #ccc !important;
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
@@ -168,24 +155,10 @@ footer a:hover {
 }
 
 /* Contact Form Styling */
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button,
-.content,
-.tile,
-.hero,
-footer,
-.navbar {
-  background-color: #ffffff !important;
-  color: #1a1a1a !important;
-}
-
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   display: flex;
@@ -209,8 +182,6 @@ footer,
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  background-color: #ffffff;
-  color: #1a1a1a;
   display: block;
 }
 
@@ -236,6 +207,42 @@ footer,
 .contact-form button.cta {
   margin-top: 1.5rem;
   align-self: flex-start;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #0f0f0f !important;
+    color: #f0f0f0 !important;
+  }
+
+  body, .hero, .content, .tile, .navbar, footer, .contact-form input, .contact-form textarea, .contact-form button {
+    background-color: #1a1a1a !important;
+    color: #f0f0f0 !important;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #aaaaaa;
+  }
+
+  .cta {
+    background-color: #d4af37;
+    color: #000;
+  }
+
+  .cta:hover {
+    background-color: #b38e2d;
+  }
+
+  .quote-band {
+    background-color: #f8f8f6;
+    color: #121212;
+  }
+
+  footer a {
+    color: #ffd700;
+  }
 }
 
 /* Responsive */
