@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Startup Starters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <section class="page-header">
+    <h1>Thank You</h1>
+    <p>We’ve received your message and will follow up shortly.</p>
+  </section>
+
+  <section class="content" style="text-align:center; margin-top: 2rem;">
+    <a class="cta" href="index.html">Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 <a href="https://startupstarters.com" target="_blank">Startup Starters</a></p>
+  </footer>
+</body>
+</html>
