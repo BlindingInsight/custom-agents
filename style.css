@@ -160,6 +160,18 @@ footer a:hover {
 
 /* Contact Form Styling */
 
+.contact-form input,
+.contact-form textarea,
+.contact-form button,
+.content,
+.tile,
+.hero,
+footer,
+.navbar {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
