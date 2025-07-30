@@ -10,7 +10,7 @@ html, body {
   line-height: 1.6;
 }
 
-body, .hero, .content, .tile, .navbar, footer, .contact-form input, .contact-form textarea, .contact-form button {
+body, .hero, .content, .tile, .navbar, footer, .contact-form input, .contact-form textarea, .contact-form button, . contact-form label {
   background-color: #ffffff !important;
   color: #1a1a1a !important;
 }
