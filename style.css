@@ -747,6 +747,8 @@ html { scroll-behavior: smooth; }
 .home-flip-front {
   background: rgba(255, 255, 255, 0.03) !important;
   border-left: 2px solid #d4af37;
+  transform: rotateY(0deg);
+  z-index: 2;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 .home-flip-front:hover {
@@ -765,6 +767,7 @@ html { scroll-behavior: smooth; }
   background: rgba(212, 175, 55, 0.08) !important;
   border-color: rgba(212, 175, 55, 0.2);
   transform: rotateY(180deg);
+  z-index: 1;
 }
 .home-flip-back p {
   font-size: 0.85rem;
