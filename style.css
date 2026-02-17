@@ -867,12 +867,23 @@ html { scroll-behavior: smooth; }
 .home-case-study::before {
   content: '';
   position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 59px,
+      rgba(255, 255, 255, 0.02) 59px,
+      rgba(255, 255, 255, 0.02) 60px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 59px,
+      rgba(255, 255, 255, 0.02) 59px,
+      rgba(255, 255, 255, 0.02) 60px
+    );
   pointer-events: none;
 }
 .home-case-card {
@@ -1273,6 +1284,22 @@ html { scroll-behavior: smooth; }
 .home-stagger.home-in-view .home-step {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* --- Section dividers --- */
+.home-why,
+.home-verticals,
+.home-who,
+.home-quote-section,
+.home-stats {
+  border-top: 1px solid rgba(212, 175, 55, 0.08);
+}
+.home-services,
+.home-compare,
+.home-case-study,
+.home-process,
+.home-cred {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 /* --- Footer on homepage --- */
