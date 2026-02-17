@@ -433,6 +433,16 @@ html { scroll-behavior: smooth; }
   max-width: 640px;
   margin: 0 auto 3rem;
 }
+.home-hero-props {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
+.home-hero-props .home-flip-card {
+  height: 120px;
+}
 .home-hero-actions {
   display: flex;
   align-items: center;
@@ -1193,6 +1203,7 @@ html { scroll-behavior: smooth; }
     margin-top: 3rem;
     text-align: center;
   }
+  .home-hero-props,
   .home-props-grid,
   .home-why-grid,
   .home-services-grid {
