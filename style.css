@@ -776,6 +776,68 @@ html { scroll-behavior: smooth; }
   margin: 0;
 }
 
+/* --- Case Study --- */
+.home-case-study {
+  padding: 8rem 2rem;
+  background: #000 !important;
+}
+.home-case-card {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 4px;
+  padding: 3rem;
+  background: rgba(212, 175, 55, 0.03) !important;
+  position: relative;
+}
+.home-case-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4af37;
+  padding: 0.35rem 1rem;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  margin-bottom: 1.5rem;
+}
+.home-case-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff !important;
+  margin: 0 0 2rem;
+}
+.home-case-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.home-case-tag {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+.home-case-detail p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .home-case-details {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .home-case-card {
+    padding: 2rem;
+  }
+}
+
 /* --- Quote --- */
 .home-quote-section {
   background: #000 !important;
