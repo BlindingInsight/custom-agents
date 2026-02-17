@@ -516,6 +516,16 @@ html { scroll-behavior: smooth; }
 .home-props {
   padding: 4.5rem 2rem;
   background: #0f1729 !important;
+  position: relative;
+}
+.home-props::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(74, 124, 155, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+  pointer-events: none;
 }
 .home-props-grid {
   display: grid;
@@ -568,6 +578,16 @@ html { scroll-behavior: smooth; }
 .home-compare {
   padding: 4.5rem 2rem;
   background: #000 !important;
+  position: relative;
+}
+.home-compare::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 10% 30%, rgba(74, 124, 155, 0.05) 0%, transparent 40%);
+  pointer-events: none;
 }
 .home-compare-wrapper {
   max-width: 960px;
@@ -636,6 +656,15 @@ html { scroll-behavior: smooth; }
   padding: 3.5rem 2rem;
   border-top: 1px solid rgba(212, 175, 55, 0.06);
   border-bottom: 1px solid rgba(212, 175, 55, 0.06);
+  position: relative;
+}
+.home-stats::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
+  pointer-events: none;
 }
 .home-stats-grid {
   display: grid;
@@ -739,6 +768,16 @@ html { scroll-behavior: smooth; }
 .home-verticals {
   padding: 4.5rem 2rem;
   background: #0f1729 !important;
+  position: relative;
+}
+.home-verticals::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 80%, rgba(74, 124, 155, 0.06) 0%, transparent 45%);
+  pointer-events: none;
 }
 .home-verticals-grid {
   display: grid;
@@ -898,6 +937,15 @@ html { scroll-behavior: smooth; }
   background: #0f1729 !important;
   padding: 4rem 2rem;
   text-align: center;
+  position: relative;
+}
+.home-quote-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 .home-big-quote {
   font-family: 'Playfair Display', serif;
@@ -916,6 +964,16 @@ html { scroll-behavior: smooth; }
 .home-why {
   padding: 4.5rem 2rem;
   background: #0f1729 !important;
+  position: relative;
+}
+.home-why::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(212, 175, 55, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 20%, rgba(74, 124, 155, 0.07) 0%, transparent 40%);
+  pointer-events: none;
 }
 .home-why-grid {
   display: grid;
@@ -942,6 +1000,16 @@ html { scroll-behavior: smooth; }
 .home-services {
   padding: 4.5rem 2rem;
   background: #000 !important;
+  position: relative;
+}
+.home-services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 60%, rgba(74, 124, 155, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 15% 30%, rgba(212, 175, 55, 0.04) 0%, transparent 35%);
+  pointer-events: none;
 }
 .home-services-grid {
   display: grid;
@@ -983,6 +1051,16 @@ html { scroll-behavior: smooth; }
 .home-who {
   padding: 4.5rem 2rem;
   background: #0f1729 !important;
+  position: relative;
+}
+.home-who::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 85% 40%, rgba(74, 124, 155, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 35%);
+  pointer-events: none;
 }
 .home-who-content {
   display: grid;
@@ -1019,6 +1097,16 @@ html { scroll-behavior: smooth; }
 .home-process {
   padding: 4.5rem 2rem;
   background: #000 !important;
+  position: relative;
+}
+.home-process::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 40% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 75% 80%, rgba(74, 124, 155, 0.06) 0%, transparent 45%);
+  pointer-events: none;
 }
 .home-process-steps {
   display: grid;
@@ -1065,6 +1153,15 @@ html { scroll-behavior: smooth; }
   padding: 4.5rem 2rem;
   background: #000 !important;
   border-top: 1px solid rgba(212, 175, 55, 0.06);
+  position: relative;
+}
+.home-contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.06) 0%, transparent 45%);
+  pointer-events: none;
 }
 .home-contact .home-section-header h2 { color: #fff !important; }
 .home-contact .home-section-header p { color: rgba(255, 255, 255, 0.4) !important; }
