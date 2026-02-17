@@ -6,27 +6,28 @@
   <title>Thank You | Custom AI Agents</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="navbar"></div>
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
+<body class="home-page">
 
-  <section class="page-header">
-    <h1>Thank You</h1>
-    <p>We’ve received your message and will follow up shortly.</p>
-  </section>
+  <nav class="home-nav">
+    <div class="logo">Custom AI Agents</div>
+    <div class="home-nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
 
-  <section class="content" style="text-align:center; margin-top: 2rem;">
-    <a class="cta" href="index.html">Back to Home</a>
+  <section class="home-hero" style="min-height: 60vh; padding: 6rem 2rem;">
+    <div class="home-hero-glow"></div>
+    <div class="home-hero-content">
+      <div class="home-hero-eyebrow">Message Received</div>
+      <h1 class="home-hero-title" style="font-size: 3rem;">Thank you.</h1>
+      <p class="home-hero-sub" style="margin-bottom: 2.5rem;">We've received your message and will follow up shortly.</p>
+      <a class="cta" href="index.html">Back to Home</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 <a href="https://custom-agents.ai" target="_blank">Custom AI Agents</a></p>
+    <p>&copy; 2025-2026 Summit AI Group | Always Day One</p>
   </footer>
+
 </body>
 </html>
