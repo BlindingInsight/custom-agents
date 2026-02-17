@@ -43,7 +43,7 @@ body, .hero, .content, .tile, .navbar, footer, .contact-form input, .contact-for
 /* Hero */
 .hero {
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 3.5rem 2rem;
 }
 
 .hero h1 {
@@ -284,6 +284,7 @@ footer a {
 /* ===================================================================
    HOMEPAGE — Full dark cinematic theme (SpaceX-inspired)
    All classes prefixed with home- to scope to homepage only.
+   Secondary accent: steel blue #4a7c9b
    =================================================================== */
 
 /* Force dark theme on homepage regardless of system preference */
@@ -342,17 +343,15 @@ html { scroll-behavior: smooth; }
   justify-content: center;
   background: #000 !important;
   overflow: hidden;
-  padding: 8rem 2rem 6rem;
+  padding: 6rem 2rem 4rem;
 }
-.home-hero-grid {
+#home-particles {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 45%, black 5%, transparent 65%);
-  mask-image: radial-gradient(ellipse 60% 50% at 50% 45%, black 5%, transparent 65%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 .home-hero-glow {
   position: absolute;
@@ -475,7 +474,7 @@ html { scroll-behavior: smooth; }
 /* --- Section Headers (all light on dark) --- */
 .home-section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 .home-section-header h2 {
   font-family: 'Playfair Display', serif;
@@ -492,10 +491,21 @@ html { scroll-behavior: smooth; }
   max-width: 550px;
 }
 
+/* --- Noise texture overlay for depth --- */
+.home-page::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
 /* --- Value Props --- */
 .home-props {
-  padding: 8rem 2rem;
-  background: #000 !important;
+  padding: 4.5rem 2rem;
+  background: linear-gradient(180deg, #000 0%, #040610 100%) !important;
 }
 .home-props-grid {
   display: grid;
@@ -546,8 +556,8 @@ html { scroll-behavior: smooth; }
 
 /* --- Comparison Grid --- */
 .home-compare {
-  padding: 8rem 2rem;
-  background: #000 !important;
+  padding: 4.5rem 2rem;
+  background: linear-gradient(180deg, #040610 0%, #000 100%) !important;
 }
 .home-compare-wrapper {
   max-width: 960px;
@@ -612,8 +622,8 @@ html { scroll-behavior: smooth; }
 
 /* --- Stats Band --- */
 .home-stats {
-  background: #000 !important;
-  padding: 6rem 2rem;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.03) 0%, #000 100%) !important;
+  padding: 3.5rem 2rem;
   border-top: 1px solid rgba(212, 175, 55, 0.06);
   border-bottom: 1px solid rgba(212, 175, 55, 0.06);
 }
@@ -644,8 +654,20 @@ html { scroll-behavior: smooth; }
 
 /* --- Credibility --- */
 .home-cred {
-  padding: 8rem 2rem;
-  background: #000 !important;
+  padding: 4.5rem 2rem;
+  background: linear-gradient(180deg, #000 0%, #040610 100%) !important;
+  position: relative;
+}
+.home-cred::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(74, 124, 155, 0.05) 0%, transparent 70%);
+  pointer-events: none;
 }
 .home-cred-badges {
   display: flex;
@@ -705,8 +727,8 @@ html { scroll-behavior: smooth; }
 
 /* --- Verticals (Flip Cards) --- */
 .home-verticals {
-  padding: 8rem 2rem;
-  background: #000 !important;
+  padding: 4.5rem 2rem;
+  background: linear-gradient(180deg, #040610 0%, #000 100%) !important;
 }
 .home-verticals-grid {
   display: grid;
@@ -778,8 +800,20 @@ html { scroll-behavior: smooth; }
 
 /* --- Case Study --- */
 .home-case-study {
-  padding: 8rem 2rem;
+  padding: 4.5rem 2rem;
   background: #000 !important;
+  position: relative;
+}
+.home-case-study::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.04) 0%, transparent 70%);
+  pointer-events: none;
 }
 .home-case-card {
   max-width: 800px;
@@ -841,7 +875,7 @@ html { scroll-behavior: smooth; }
 /* --- Quote --- */
 .home-quote-section {
   background: #000 !important;
-  padding: 7rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 .home-big-quote {
@@ -859,7 +893,7 @@ html { scroll-behavior: smooth; }
 
 /* --- Why Custom AI --- */
 .home-why {
-  padding: 8rem 2rem;
+  padding: 4.5rem 2rem;
   background: #000 !important;
 }
 .home-why-grid {
@@ -885,7 +919,7 @@ html { scroll-behavior: smooth; }
 
 /* --- Services --- */
 .home-services {
-  padding: 8rem 2rem;
+  padding: 4.5rem 2rem;
   background: #000 !important;
 }
 .home-services-grid {
@@ -926,7 +960,7 @@ html { scroll-behavior: smooth; }
 
 /* --- Who We Work With --- */
 .home-who {
-  padding: 8rem 2rem;
+  padding: 4.5rem 2rem;
   background: #000 !important;
 }
 .home-who-content {
@@ -962,7 +996,7 @@ html { scroll-behavior: smooth; }
 
 /* --- Process Steps --- */
 .home-process {
-  padding: 8rem 2rem;
+  padding: 4.5rem 2rem;
   background: #000 !important;
 }
 .home-process-steps {
@@ -1007,7 +1041,7 @@ html { scroll-behavior: smooth; }
 
 /* --- Contact Form --- */
 .home-contact {
-  padding: 8rem 2rem;
+  padding: 4.5rem 2rem;
   background: #000 !important;
   border-top: 1px solid rgba(212, 175, 55, 0.06);
 }
@@ -1063,7 +1097,7 @@ html { scroll-behavior: smooth; }
 /* --- Final CTA (unused on consolidated page but kept) --- */
 .home-final-cta {
   background: #000 !important;
-  padding: 8rem 2rem;
+  padding: 4.5rem 2rem;
   text-align: center;
 }
 .home-final-cta h2 {

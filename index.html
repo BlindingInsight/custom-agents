@@ -27,7 +27,7 @@
 
   <!-- Hero -->
   <section id="top" class="home-hero">
-    <div class="home-hero-grid"></div>
+    <canvas id="home-particles"></canvas>
     <div class="home-hero-glow"></div>
     <div class="home-hero-orb home-hero-orb-1"></div>
     <div class="home-hero-orb home-hero-orb-2"></div>
@@ -360,7 +360,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 <a href="https://custom-agents.ai" target="_blank">Custom AI Agents</a> | Always Day One</p>
+    <p>&copy; 2025-2026 Summit AI Group | Always Day One</p>
   </footer>
 
   <script>
@@ -406,6 +406,70 @@
       }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
 
       sections.forEach(function(s) { navObserver.observe(s); });
+
+      // Hero particle network
+      (function() {
+        var canvas = document.getElementById('home-particles');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var particles = [];
+        var count = 60;
+        var maxDist = 120;
+
+        function resize() {
+          var hero = canvas.parentElement;
+          canvas.width = hero.offsetWidth;
+          canvas.height = hero.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        for (var i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 1.5 + 0.5
+          });
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          for (var i = 0; i < count; i++) {
+            var p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(212, 175, 55, 0.25)';
+            ctx.fill();
+
+            for (var j = i + 1; j < count; j++) {
+              var q = particles[j];
+              var dx = p.x - q.x;
+              var dy = p.y - q.y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < maxDist) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(q.x, q.y);
+                ctx.strokeStyle = 'rgba(212, 175, 55,' + (0.08 * (1 - dist / maxDist)) + ')';
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(draw);
+        }
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          draw();
+        }
+      })();
     })();
   </script>
 </body>
