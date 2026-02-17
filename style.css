@@ -515,7 +515,7 @@ html { scroll-behavior: smooth; }
 /* --- Value Props --- */
 .home-props {
   padding: 4.5rem 2rem;
-  background: linear-gradient(180deg, #000 0%, #0a0e1a 100%) !important;
+  background: #0f1729 !important;
 }
 .home-props-grid {
   display: grid;
@@ -567,7 +567,7 @@ html { scroll-behavior: smooth; }
 /* --- Comparison Grid --- */
 .home-compare {
   padding: 4.5rem 2rem;
-  background: linear-gradient(180deg, #0a0e1a 0%, #000 100%) !important;
+  background: #000 !important;
 }
 .home-compare-wrapper {
   max-width: 960px;
@@ -632,7 +632,7 @@ html { scroll-behavior: smooth; }
 
 /* --- Stats Band --- */
 .home-stats {
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.06) 0%, #000 100%) !important;
+  background: #0f1729 !important;
   padding: 3.5rem 2rem;
   border-top: 1px solid rgba(212, 175, 55, 0.06);
   border-bottom: 1px solid rgba(212, 175, 55, 0.06);
@@ -665,7 +665,7 @@ html { scroll-behavior: smooth; }
 /* --- Credibility --- */
 .home-cred {
   padding: 4.5rem 2rem;
-  background: linear-gradient(180deg, #000 0%, #0a0e1a 100%) !important;
+  background: #000 !important;
   position: relative;
 }
 .home-cred::before {
@@ -738,7 +738,7 @@ html { scroll-behavior: smooth; }
 /* --- Verticals (Flip Cards) --- */
 .home-verticals {
   padding: 4.5rem 2rem;
-  background: linear-gradient(180deg, #0a0e1a 0%, #000 100%) !important;
+  background: #0f1729 !important;
 }
 .home-verticals-grid {
   display: grid;
@@ -884,7 +884,7 @@ html { scroll-behavior: smooth; }
 
 /* --- Quote --- */
 .home-quote-section {
-  background: #000 !important;
+  background: #0f1729 !important;
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -904,7 +904,7 @@ html { scroll-behavior: smooth; }
 /* --- Why Custom AI --- */
 .home-why {
   padding: 4.5rem 2rem;
-  background: #000 !important;
+  background: #0f1729 !important;
 }
 .home-why-grid {
   display: grid;
@@ -971,7 +971,7 @@ html { scroll-behavior: smooth; }
 /* --- Who We Work With --- */
 .home-who {
   padding: 4.5rem 2rem;
-  background: #000 !important;
+  background: #0f1729 !important;
 }
 .home-who-content {
   display: grid;
