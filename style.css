@@ -788,6 +788,17 @@ html { scroll-behavior: smooth; }
   border-color: rgba(212, 175, 55, 0.3);
   border-left-color: #d4af37;
 }
+.home-flip-front {
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.home-flip-icon {
+  width: 28px;
+  height: 28px;
+  color: #d4af37;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
 .home-flip-front h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
