@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom AI Agents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <section class="hero">
+    <h1>We build custom AI software that transforms enterprise decision-making.</h1>
+    <p>Modular. Fast. Custom. Business-aligned. No consultants. Just builders.</p>
+    <p>Always Day One.</p>
+    <a class="cta" href="contact.html">Talk to us</a>
+  </section>
+
+  <section class="value-props">
+    <div class="tile">Custom GenAI platforms, not point solutions</div>
+    <div class="tile">Built by former enterprise insiders</div>
+    <div class="tile">Zero-risk design partnerships</div>
+  </section>
+
+  <section class="intro">
+    <p>We solve real business problems with GenAI. Our team builds agentic solutions and internal copilots tailored to your needs — not cookie-cutter AI pilots. No fluff, no slide decks — just real working software that accelerates how your enterprise makes decisions.</p>
+  </section>
+
+  <section class="quote-band">
+    <blockquote>"GenAI isn't a tool. It's the new operating system of the enterprise."</blockquote>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 <a href="https://custom-agents.ai" target="_blank">Custom AI Agents</a> | Always Day One</p>
+  </footer>
+</body>
+</html>

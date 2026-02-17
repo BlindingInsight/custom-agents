@@ -3,43 +3,410 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom AI Agents</title>
+  <title>Custom AI Agents | Enterprise AI Platforms in Weeks</title>
+  <meta name="description" content="Summit AI Group builds custom GenAI platforms, agentic workflows, and AI copilots for enterprises. Working software in weeks, not years.">
+  <meta property="og:title" content="Custom AI Agents | Enterprise AI Platforms in Weeks">
+  <meta property="og:description" content="Custom GenAI platforms built for your business, your data, your strategy. Owned by you.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://custom-agents.ai">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="navbar"></div>
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
+<body class="home-page">
 
-  <section class="hero">
-    <h1>We build the Enterprise brAIn for end-to-end decision-making.</h1>
-    <p>Modular. Fast. Custom. Business-aligned. No consultants. Just builders.</p>
-    <p>Creating superhumans using AI.</p>
-    <p>Always Day One.</p>
-    <a class="cta" href="contact.html">Talk to us</a>
+  <nav class="home-nav" id="home-nav">
+    <div class="logo">Custom AI Agents</div>
+    <div class="home-nav-links">
+      <a href="#top">Home</a>
+      <a href="#why">Why</a>
+      <a href="#what">What</a>
+      <a href="#who">You</a>
+      <a href="#how">How</a>
+      <a href="#contact">Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="top" class="home-hero">
+    <div class="home-hero-grid"></div>
+    <div class="home-hero-glow"></div>
+    <div class="home-hero-orb home-hero-orb-1"></div>
+    <div class="home-hero-orb home-hero-orb-2"></div>
+    <div class="home-hero-content">
+      <div class="home-hero-eyebrow home-hero-fade">Summit AI Group</div>
+      <h1 class="home-hero-title home-hero-fade">
+        AI that knows your business<br>as well as you do.
+      </h1>
+      <p class="home-hero-accent home-hero-fade">Built in weeks. Not years.</p>
+      <p class="home-hero-sub home-hero-fade">
+        Custom agentic platforms tuned to your data, your strategy, your customers. Already in production, already driving results.
+      </p>
+      <div class="home-hero-actions home-hero-fade">
+        <a class="cta" href="#contact">Start a conversation</a>
+        <a class="home-ghost-link" href="#how">See how it works <span>&rarr;</span></a>
+      </div>
+    </div>
+    <div class="home-hero-tagline home-hero-fade">Always Day One.</div>
   </section>
 
-  <section class="value-props">
-    <div class="tile">Custom Agentic AI intelligence, not point solutions</div>
-    <div class="tile">Built by former enterprise insiders</div>
-    <div class="tile">Zero-risk design partnerships</div>
+  <!-- Value Props -->
+  <section class="home-props">
+    <div class="home-section-header home-fade">
+      <h2>What sets us apart</h2>
+    </div>
+    <div class="home-props-grid home-fade">
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Your AI, Your Business</h3></div>
+          <div class="home-flip-back"><p>Trained on your data. Aligned to your strategy. Embedded in your workflows.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Enterprise-Grade Team</h3></div>
+          <div class="home-flip-back"><p>Fortune 100 veterans who've built and shipped AI at the highest levels.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Zero-Risk Engagement</h3></div>
+          <div class="home-flip-back"><p>We co-build a working proof-of-concept first. You decide based on software, not slides.</p></div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="intro">
-    <p>We solve real business problems with generative AI agents. Our team builds agentic solutions and internal copilots tailored to your needs — not cookie-cutter AI pilots. No fluff, no slide decks — just real working software that accelerates how your enterprise makes decisions.</p>
+  <!-- Why Custom AI -->
+  <section id="why" class="home-why">
+    <div class="home-section-header home-fade">
+      <h2>Why custom AI</h2>
+      <p>Your business is unique. Your technology should be too.</p>
+    </div>
+    <div class="home-why-grid home-fade">
+      <div class="home-why-item">
+        <h3>The $2 to $10 Strategy</h3>
+        <p>Start with one use case. Architect it to scale into a full platform.</p>
+      </div>
+      <div class="home-why-item">
+        <h3>Own Your Platform</h3>
+        <p>Your data, your code, your IP. No vendor lock-in, no recurring platform fees.</p>
+      </div>
+      <div class="home-why-item">
+        <h3>AI-Native Delivery</h3>
+        <p>Enterprise-grade platforms at startup speed. Weeks, not quarters.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="quote-band">
-    <blockquote>"AI isn't just a tool. It's the new operating system of the enterprise."</blockquote>
+  <!-- What We Build -->
+  <section id="what" class="home-services">
+    <div class="home-section-header home-fade">
+      <h2>What we build</h2>
+      <p>Vertical AI platforms with real customers using them daily.</p>
+    </div>
+    <div class="home-services-grid home-stagger">
+      <div class="home-service" style="--i:0">
+        <h3>Internal Agents &amp; Copilots</h3>
+        <p>AI experts with context, memory, tools. Embedded in your workflows.</p>
+      </div>
+      <div class="home-service" style="--i:1">
+        <h3>Modular GenAI Platforms</h3>
+        <p>One AI-native platform that adapts to every department and use case.</p>
+      </div>
+      <div class="home-service" style="--i:2">
+        <h3>Data-to-Decision Pipelines</h3>
+        <p>Connect unstructured data with real-time business decisions.</p>
+      </div>
+      <div class="home-service" style="--i:3">
+        <h3>Production-Grade &amp; Compliant</h3>
+        <p>Your infrastructure. Your security requirements. Deployed, not demoed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="home-compare">
+    <div class="home-section-header home-fade">
+      <h2>Built by practitioners, not consultants</h2>
+      <p>We don't sell advice. We ship product.</p>
+    </div>
+    <div class="home-compare-wrapper home-fade">
+      <div class="home-compare-grid">
+        <div class="home-cg-corner"></div>
+        <div class="home-cg-head">Strategy<br>Consulting</div>
+        <div class="home-cg-head">Technology<br>Consulting</div>
+        <div class="home-cg-head home-cg-us">Summit AI<br>Group</div>
+
+        <div class="home-cg-label">Deliverable</div>
+        <div class="home-cg-cell">Slide decks &amp; roadmaps</div>
+        <div class="home-cg-cell">Assessments &amp; reports</div>
+        <div class="home-cg-cell home-cg-us">Working software, deployed</div>
+
+        <div class="home-cg-label">Timeline</div>
+        <div class="home-cg-cell">6 &ndash; 12 months</div>
+        <div class="home-cg-cell">12 &ndash; 18 months</div>
+        <div class="home-cg-cell home-cg-us">Days to weeks</div>
+
+        <div class="home-cg-label">Delivery</div>
+        <div class="home-cg-cell">10 &ndash; 50 consultants</div>
+        <div class="home-cg-cell">20 &ndash; 100 engineers</div>
+        <div class="home-cg-cell home-cg-us">AI-augmented experts</div>
+
+        <div class="home-cg-label">IP ownership</div>
+        <div class="home-cg-cell">Consultant retains</div>
+        <div class="home-cg-cell">Shared / licensed</div>
+        <div class="home-cg-cell home-cg-us">You own everything</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="home-verticals">
+    <div class="home-section-header home-fade">
+      <h2>Industries we transform</h2>
+    </div>
+    <div class="home-verticals-grid home-fade">
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Retail &amp; Grocery</h3></div>
+          <div class="home-flip-back"><p>Demand forecasting, personalization, pricing optimization, supply chain intelligence.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Financial Services &amp; Fintech</h3></div>
+          <div class="home-flip-back"><p>Risk analytics, compliance automation, insurance, variable annuities, cooperative banking, AI-driven decision support.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Logistics &amp; Supply Chain</h3></div>
+          <div class="home-flip-back"><p>Enterprise demand forecasting, supply chain modernization, operational intelligence.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Manufacturing</h3></div>
+          <div class="home-flip-back"><p>Digital twin platforms, production scheduling, real-time analytics on the factory floor.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Biotech &amp; Life Sciences</h3></div>
+          <div class="home-flip-back"><p>AI-driven drug discovery support, CADD platforms, research workflow automation.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Oil &amp; Gas EPC</h3></div>
+          <div class="home-flip-back"><p>Procurement automation, vendor intelligence, project cost analytics for engineering &amp; construction.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Small Business Technology</h3></div>
+          <div class="home-flip-back"><p>AI-powered operations, workflow automation, decision support for growing businesses.</p></div>
+        </div>
+      </div>
+      <div class="home-flip-card" onclick="flipCard(this)">
+        <div class="home-flip-inner">
+          <div class="home-flip-front"><h3>Education</h3></div>
+          <div class="home-flip-back"><p>AI curriculum development, learning platforms, applied AI training. University lecturer, visiting professor.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study -->
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>From paper to production</h2>
+    </div>
+    <div class="home-case-card home-fade">
+      <div class="home-case-label">Case Study</div>
+      <h3>A mid-size engineer-to-order manufacturer</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>Zero production visibility. Paper-based scheduling. No data infrastructure.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>5-module digital twin platform. Production tracking, scheduling, analytics, quality, reporting.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Result</span>
+          <p>Live on the factory floor. Real-time production intelligence where there was none.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Work With -->
+  <section id="who" class="home-who">
+    <div class="home-section-header home-fade">
+      <h2>Who we work with</h2>
+      <p>If you have real pain and want real software, we're your people.</p>
+    </div>
+    <div class="home-who-content home-fade">
+      <div class="home-who-col">
+        <h3>Our ideal partners</h3>
+        <ul>
+          <li>Executives with urgent, high-impact problems</li>
+          <li>Operators who've tried vendors without success</li>
+          <li>PE funds integrating portfolio companies</li>
+          <li>Decision-makers ready to co-build</li>
+        </ul>
+      </div>
+      <div class="home-who-col">
+        <h3>You might be a fit if&hellip;</h3>
+        <p>You have something urgent you wish someone would just build already.</p>
+        <h3>No decks. No buzzwords.</h3>
+        <p>Just a working prototype, fast.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Engage -->
+  <section id="how" class="home-process">
+    <div class="home-section-header home-fade">
+      <h2>How we engage</h2>
+      <p>Three ways to work together. All start with a conversation.</p>
+    </div>
+    <div class="home-process-steps home-stagger">
+      <div class="home-step" style="--i:0">
+        <span class="home-step-num">&rarr;</span>
+        <h3>Advisory Retainer</h3>
+        <p>Fractional AI leadership. Strategy, architecture, and vendor evaluation.</p>
+      </div>
+      <div class="home-step" style="--i:1">
+        <span class="home-step-num">&rarr;</span>
+        <h3>Fixed-Scope Build</h3>
+        <p>Defined deliverable. Fixed timeline. Working software at the end.</p>
+      </div>
+      <div class="home-step" style="--i:2">
+        <span class="home-step-num">&rarr;</span>
+        <h3>Zero-Risk PoC</h3>
+        <p>We co-build a proof-of-concept first. You decide based on results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="home-stats">
+    <div class="home-stats-grid home-stagger">
+      <div class="home-stat" style="--i:0">
+        <span class="home-stat-num">20+</span>
+        <span class="home-stat-label">Years in enterprise<br>AI &amp; engineering</span>
+      </div>
+      <div class="home-stat" style="--i:1">
+        <span class="home-stat-num">8</span>
+        <span class="home-stat-label">Patents in AI<br>&amp; software</span>
+      </div>
+      <div class="home-stat" style="--i:2">
+        <span class="home-stat-num">20+</span>
+        <span class="home-stat-label">Conference<br>publications</span>
+      </div>
+      <div class="home-stat" style="--i:3">
+        <span class="home-stat-num">$B+</span>
+        <span class="home-stat-label">Business impact<br>delivered</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility -->
+  <section class="home-cred">
+    <div class="home-section-header home-fade">
+      <h2>Built by people who've done this before</h2>
+      <p>Our team has built and shipped AI at the highest levels of enterprise.</p>
+    </div>
+    <div class="home-cred-badges home-fade">
+      <span class="home-badge">Fortune 100 AI Leadership</span>
+      <span class="home-badge">8 Patents</span>
+      <span class="home-badge">20+ Publications</span>
+      <span class="home-badge">Ph.D. Computer Science</span>
+      <span class="home-badge">Harvard Business School</span>
+      <span class="home-badge">IIT Bombay</span>
+    </div>
+    <div class="home-cred-bio home-fade">
+      <p>Founded by <a href="https://www.linkedin.com/in/skiyer">Subramanian Iyer</a>. 20+ years leading AI at Goldman Sachs, Google, Target, and Albertsons. Platforms that created multi-billion-dollar business impact.</p>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="home-quote-section">
+    <blockquote class="home-big-quote home-fade">
+      "GenAI isn't a tool.<br>
+      <span>It's the new operating system of the enterprise.</span>"
+    </blockquote>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="home-contact">
+    <div class="home-section-header home-fade">
+      <h2>Let's build something</h2>
+      <p>Tell us what's keeping you up at night. We'll build the solution.</p>
+    </div>
+    <form action="https://formspree.io/f/mvgbolpa" method="POST" class="home-contact-form home-fade">
+      <input type="hidden" name="_redirect" value="https://custom-agents.ai/thanks.html">
+      <input type="hidden" name="site" value="custom-agents.ai">
+      <label for="contact-name">Name</label>
+      <input type="text" id="contact-name" name="name" required>
+      <label for="contact-email">Email</label>
+      <input type="email" id="contact-email" name="email" required>
+      <label for="contact-message">What's your biggest challenge?</label>
+      <textarea id="contact-message" name="message" rows="5" required></textarea>
+      <button type="submit" class="cta">Send</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025-2026 <a href="https://custom-agents.ai" target="_blank">Custom AI Agents</a> | Always Day One</p>
+    <p>&copy; 2026 <a href="https://custom-agents.ai" target="_blank">Custom AI Agents</a> | Always Day One</p>
   </footer>
+
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('home-in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.home-fade, .home-stagger').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      document.querySelectorAll('.home-hero-fade').forEach(function(el, i) {
+        setTimeout(function() { el.classList.add('home-in-view'); }, 250 + i * 130);
+      });
+
+      // Flip cards — only one open at a time
+      window.flipCard = function(card) {
+        var wasFlipped = card.classList.contains('flipped');
+        document.querySelectorAll('.home-flip-card.flipped').forEach(function(c) {
+          c.classList.remove('flipped');
+        });
+        if (!wasFlipped) card.classList.add('flipped');
+      };
+
+      // Sticky nav active state
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.home-nav-links a');
+      var navObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function(a) { a.classList.remove('home-nav-active'); });
+            var id = entry.target.getAttribute('id');
+            var link = document.querySelector('.home-nav-links a[href="#' + id + '"]');
+            if (link) link.classList.add('home-nav-active');
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+
+      sections.forEach(function(s) { navObserver.observe(s); });
+    })();
+  </script>
 </body>
 </html>
