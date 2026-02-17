@@ -162,31 +162,31 @@
       <h2>Industries we transform</h2>
     </div>
     <div class="home-verticals-grid home-fade">
-      <div class="home-flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="home-flip-card" onclick="flipCard(this)">
         <div class="home-flip-inner">
           <div class="home-flip-front"><h3>Retail</h3></div>
           <div class="home-flip-back"><p>Demand forecasting, personalization, pricing optimization, and supply chain intelligence. Fortune 50 retail experience.</p></div>
         </div>
       </div>
-      <div class="home-flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="home-flip-card" onclick="flipCard(this)">
         <div class="home-flip-inner">
           <div class="home-flip-front"><h3>Financial Services</h3></div>
           <div class="home-flip-back"><p>Risk analytics, compliance automation, insurance, variable annuities, cooperative banking, and AI-driven decision support. Fortune 50 banking and investment experience.</p></div>
         </div>
       </div>
-      <div class="home-flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="home-flip-card" onclick="flipCard(this)">
         <div class="home-flip-inner">
           <div class="home-flip-front"><h3>Manufacturing</h3></div>
           <div class="home-flip-back"><p>Digital twin platforms, production scheduling, and real-time analytics &mdash; live on the factory floor.</p></div>
         </div>
       </div>
-      <div class="home-flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="home-flip-card" onclick="flipCard(this)">
         <div class="home-flip-inner">
           <div class="home-flip-front"><h3>Biotech &amp; Life Sciences</h3></div>
           <div class="home-flip-back"><p>AI-driven drug discovery support, CADD platforms, and research workflow automation for CROs and pharma.</p></div>
         </div>
       </div>
-      <div class="home-flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="home-flip-card" onclick="flipCard(this)">
         <div class="home-flip-inner">
           <div class="home-flip-front"><h3>Oil &amp; Gas EPC</h3></div>
           <div class="home-flip-back"><p>Procurement automation, vendor intelligence, and project cost analytics for engineering &amp; construction.</p></div>
@@ -360,6 +360,15 @@
       document.querySelectorAll('.home-hero-fade').forEach(function(el, i) {
         setTimeout(function() { el.classList.add('home-in-view'); }, 250 + i * 130);
       });
+
+      // Flip cards — only one open at a time
+      window.flipCard = function(card) {
+        var wasFlipped = card.classList.contains('flipped');
+        document.querySelectorAll('.home-flip-card.flipped').forEach(function(c) {
+          c.classList.remove('flipped');
+        });
+        if (!wasFlipped) card.classList.add('flipped');
+      };
 
       // Sticky nav active state
       var sections = document.querySelectorAll('section[id]');
