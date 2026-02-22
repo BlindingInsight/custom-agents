@@ -309,7 +309,7 @@ html { scroll-behavior: smooth; }
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.06);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
   font-family: 'Playfair Display', serif;
 }
 .home-nav .logo {
@@ -360,7 +360,7 @@ html { scroll-behavior: smooth; }
   width: 1200px;
   height: 800px;
   transform: translateX(-50%);
-  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.07) 0%, transparent 60%);
+  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.14) 0%, transparent 60%);
   pointer-events: none;
 }
 .home-hero-orb {
@@ -374,7 +374,7 @@ html { scroll-behavior: smooth; }
   height: 600px;
   top: -15%;
   right: -10%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
   animation: home-orb-drift-1 14s ease-in-out infinite alternate;
 }
 .home-hero-orb-2 {
@@ -382,7 +382,7 @@ html { scroll-behavior: smooth; }
   height: 500px;
   bottom: -10%;
   left: -10%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.20) 0%, transparent 70%);
   animation: home-orb-drift-2 18s ease-in-out infinite alternate;
 }
 @keyframes home-orb-drift-1 {
@@ -523,8 +523,8 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(74, 124, 155, 0.18) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 40%);
+    radial-gradient(ellipse at 20% 50%, rgba(74, 124, 155, 0.28) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.25) 0%, transparent 40%);
   pointer-events: none;
 }
 .home-props-grid {
@@ -585,8 +585,8 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 70% 80%, rgba(212, 175, 55, 0.18) 0%, transparent 45%),
-    radial-gradient(ellipse at 10% 30%, rgba(74, 124, 155, 0.15) 0%, transparent 40%);
+    radial-gradient(ellipse at 70% 80%, rgba(212, 175, 55, 0.28) 0%, transparent 45%),
+    radial-gradient(ellipse at 10% 30%, rgba(74, 124, 155, 0.25) 0%, transparent 40%);
   pointer-events: none;
 }
 .home-compare-wrapper {
@@ -654,8 +654,8 @@ html { scroll-behavior: smooth; }
 .home-stats {
   background: #0f1729 !important;
   padding: 3.5rem 2rem;
-  border-top: 1px solid rgba(212, 175, 55, 0.06);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.06);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
   position: relative;
 }
 .home-stats::before {
@@ -663,7 +663,7 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.18) 0%, transparent 50%);
+    radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.28) 0%, transparent 50%);
   pointer-events: none;
 }
 .home-stats-grid {
@@ -705,7 +705,7 @@ html { scroll-behavior: smooth; }
   transform: translateX(-50%);
   width: 600px;
   height: 400px;
-  background: radial-gradient(ellipse, rgba(74, 124, 155, 0.22) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(74, 124, 155, 0.32) 0%, transparent 70%);
   pointer-events: none;
 }
 .home-cred-badges {
@@ -775,8 +775,8 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.20) 0%, transparent 40%),
-    radial-gradient(ellipse at 10% 80%, rgba(74, 124, 155, 0.16) 0%, transparent 45%);
+    radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.30) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 80%, rgba(74, 124, 155, 0.25) 0%, transparent 45%);
   pointer-events: none;
 }
 .home-verticals-grid {
@@ -869,20 +869,20 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 85% 50%, rgba(212, 175, 55, 0.20) 0%, transparent 40%),
+    radial-gradient(circle at 85% 50%, rgba(212, 175, 55, 0.30) 0%, transparent 40%),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 59px,
-      rgba(255, 255, 255, 0.07) 59px,
-      rgba(255, 255, 255, 0.07) 60px
+      rgba(255, 255, 255, 0.12) 59px,
+      rgba(255, 255, 255, 0.12) 60px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 59px,
-      rgba(255, 255, 255, 0.07) 59px,
-      rgba(255, 255, 255, 0.07) 60px
+      rgba(255, 255, 255, 0.12) 59px,
+      rgba(255, 255, 255, 0.12) 60px
     );
   pointer-events: none;
 }
@@ -955,7 +955,7 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.20) 0%, transparent 50%);
+    radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.30) 0%, transparent 50%);
   pointer-events: none;
 }
 .home-big-quote {
@@ -982,8 +982,8 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 70%, rgba(212, 175, 55, 0.20) 0%, transparent 45%),
-    radial-gradient(ellipse at 90% 20%, rgba(74, 124, 155, 0.16) 0%, transparent 40%);
+    radial-gradient(ellipse at 30% 70%, rgba(212, 175, 55, 0.30) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 20%, rgba(74, 124, 155, 0.25) 0%, transparent 40%);
   pointer-events: none;
 }
 .home-why-grid {
@@ -1018,8 +1018,8 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 80% 60%, rgba(74, 124, 155, 0.16) 0%, transparent 45%),
-    radial-gradient(ellipse at 15% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 35%);
+    radial-gradient(ellipse at 80% 60%, rgba(74, 124, 155, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse at 15% 30%, rgba(212, 175, 55, 0.25) 0%, transparent 35%);
   pointer-events: none;
 }
 .home-services-grid {
@@ -1069,8 +1069,8 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 85% 40%, rgba(74, 124, 155, 0.18) 0%, transparent 45%),
-    radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 35%);
+    radial-gradient(ellipse at 85% 40%, rgba(74, 124, 155, 0.28) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.25) 0%, transparent 35%);
   pointer-events: none;
 }
 .home-who-content {
@@ -1115,8 +1115,8 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 40% 20%, rgba(212, 175, 55, 0.18) 0%, transparent 40%),
-    radial-gradient(ellipse at 75% 80%, rgba(74, 124, 155, 0.16) 0%, transparent 45%);
+    radial-gradient(ellipse at 40% 20%, rgba(212, 175, 55, 0.28) 0%, transparent 40%),
+    radial-gradient(ellipse at 75% 80%, rgba(74, 124, 155, 0.25) 0%, transparent 45%);
   pointer-events: none;
 }
 .home-process-steps {
@@ -1163,7 +1163,7 @@ html { scroll-behavior: smooth; }
 .home-contact {
   padding: 4.5rem 2rem;
   background: #000 !important;
-  border-top: 1px solid rgba(212, 175, 55, 0.06);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
   position: relative;
 }
 .home-contact::before {
@@ -1171,7 +1171,7 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.18) 0%, transparent 45%);
+    radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.28) 0%, transparent 45%);
   pointer-events: none;
 }
 .home-contact .home-section-header h2 { color: #fff !important; }
@@ -1292,14 +1292,14 @@ html { scroll-behavior: smooth; }
 .home-who,
 .home-quote-section,
 .home-stats {
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
 }
 .home-services,
 .home-compare,
 .home-case-study,
 .home-process,
 .home-cred {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* --- Footer on homepage --- */

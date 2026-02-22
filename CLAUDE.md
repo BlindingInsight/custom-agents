@@ -80,13 +80,7 @@ Push to `main` branch. GitHub Pages auto-deploys. Custom domain configured via `
 
 ## Known Issues
 
-These exist in the current codebase (also tracked in strategy doc's immediate actions):
-
-1. **Typos on clients.html:30** — "intergate" → "integrate"
-2. **Typos on clients.html:43** — "opreator" → "operator", "efficeincy" → "efficiency"
-3. **Broken HTML on contact.html:59** — `<h2> </h2>Selected Achievements</h2>` (extra closing tag)
-4. **Copyright year** — All footers say 2025, should be 2026
-5. **contact.html:43** — LinkedIn href missing quotes: `<a href=https://...>` → `<a href="https://...">`
+None — all previously tracked issues (typos, broken HTML, copyright years, missing quotes) were fixed on 2026-02-21.
 
 ## Pending Content Work
 
