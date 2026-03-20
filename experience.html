@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Portfolio | Custom AI Agents</title>
+  <meta name="description" content="43 enterprise AI case studies across retail, life sciences, education, manufacturing, financial services, and enterprise strategy.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .portfolio-section { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .portfolio-section-header { margin-top: 3rem; margin-bottom: 1.5rem; }
+    .portfolio-section-header h2 { font-size: 1.6rem; color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
+    .portfolio-card { background: var(--card-bg, rgba(255,255,255,0.04)); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; margin-bottom: 0.75rem; overflow: hidden; transition: border-color 0.2s; }
+    .portfolio-card:hover { border-color: rgba(255,255,255,0.18); }
+    .portfolio-card-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; cursor: pointer; user-select: none; }
+    .portfolio-card-header h3 { font-size: 1.05rem; margin: 0; color: #fff; font-weight: 500; }
+    .portfolio-card-header .chevron { transition: transform 0.25s; color: rgba(255,255,255,0.4); flex-shrink: 0; margin-left: 1rem; }
+    .portfolio-card.open .chevron { transform: rotate(180deg); }
+    .portfolio-card-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .portfolio-card.open .portfolio-card-body { max-height: 600px; }
+    .portfolio-card-content { padding: 0 1.25rem 1.25rem; }
+    .portfolio-card-content .detail-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.25rem; font-weight: 600; }
+    .portfolio-card-content p { font-size: 0.92rem; color: rgba(255,255,255,0.7); line-height: 1.55; margin: 0 0 1rem; }
+  </style>
+</head>
+<body class="home-page">
+
+  <nav class="home-nav" id="home-nav">
+    <div class="logo"><a href="/" style="color:inherit;text-decoration:none">Custom AI Agents</a></div>
+    <div class="home-nav-links">
+      <a href="/">Home</a>
+      <a href="/experience.html">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="home-hero" style="min-height:35vh;padding-top:8rem">
+    <canvas id="home-particles"></canvas>
+    <div class="home-hero-glow"></div>
+    <div class="home-hero-content">
+      <div class="home-hero-eyebrow home-hero-fade">Full Portfolio</div>
+      <h1 class="home-hero-title home-hero-fade">43 case studies.<br>One team.</h1>
+      <p class="home-hero-sub home-hero-fade">
+        Enterprise AI across retail, life sciences, education, manufacturing, financial services, and enterprise strategy.
+      </p>
+    </div>
+  </section>
+
+  <div class="portfolio-section">
+
+    <!-- Demand Forecasting & Supply Chain -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Demand Forecasting & Supply Chain</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Enterprise Demand Forecasting</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A major retailer with 2,000+ stores had inconsistent demand forecasts across merchandising, supply chain, and finance. Each function used its own models, leading to overstocks and stockouts.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Unified demand forecasting platform covering 200K SKUs across stores and online channels, producing internally consistent forecasts at the SKU-store-day level. Scaled team from 5 to 45.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Unified forecasting across historically siloed functions. The shipped model significantly outperformed the industry-standard alternative used by most retailers. $3-4B in free cash flow unlocked.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Item and Store Embeddings for Substitution Detection</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Retailers need to understand which products customers treat as interchangeable. Traditional category hierarchies miss context-dependent relationships.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Learned product and store representations that capture substitutability, complementarity, and customer preference from transaction data, feeding into forecasting, pricing, and assortment.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Context-aware product relationships that go beyond static category hierarchies.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Multi-Echelon Network Design and Inventory Optimization</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Companies growing through acquisitions inherit poorly located warehouses. Inventory arrives too early (tying up capital) or too late (causing stockouts).</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Simulation-based network design optimizing warehouse locations for lead times, transport costs, labor, and disruption risk. Combined with real-time inventory control across the full multi-tier network.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>End-to-end optimization from strategic network design down to real-time inventory movement decisions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Inventory Accuracy via Sensor Fusion</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Inventory counts are inaccurate. Cycle counts are expensive and infrequent. Phantom stockouts cause lost sales.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Continuous inventory estimation by triangulating multiple data sources (sales transactions, inbound/outbound scans, camera feeds, RFID) without requiring manual counts.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Probabilistic state estimation replacing expensive manual cycle counts with continuous automated accuracy.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Lab Consumables Consumption Forecasting</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Laboratories order excess consumables to avoid running out, but face strict overnight storage limits. Over-ordering wastes transport labor and creates compliance risk.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Forecasting model predicting daily consumption per lab from historical delivery and return patterns, enabling just-in-time delivery of the correct volume.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Demand forecasting adapted for regulated lab environments with hard storage constraints.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Supply Risk Management and Vendor Analytics</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Supply chain disruptions exposed the fragility of single-source procurement. Companies need early warning of supplier instability.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Continuous monitoring of supplier health with automated risk playbooks that trigger contingency actions based on real-time risk assessments.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Proactive risk management replacing reactive firefighting with automated early-warning and response.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing & Revenue -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Pricing & Revenue</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Clearance Pricing Optimization</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A major retailer had failed three times to deploy clearance pricing optimization. Merchants had lost trust in AI-driven pricing.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Sequential decision problem solved with multiple optimization approaches. Embedded directly into merchant workflows so users see recommendations alongside projected financial impact.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Succeeded where three prior attempts failed by embedding the system in existing workflows. $100M+ profit impact.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Promotional Pricing Optimization</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>True incremental lift from promotions was hard to isolate. Merchants ran promotions on gut feel. Supply chain had no advance visibility into promotional periods.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Promotional lift estimation isolating the true incremental effect, integrated with demand forecasting so promotional plans automatically adjust supply chain planning.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Connected promotional planning and supply chain preparation into a single system. When a merchant plans a promotion, inventory positioning adjusts automatically.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Retail Media Monetization</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A major grocer needed to scale its advertising business with experimentation, forecasting, and optimization engines.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Analytics backbone: experimentation engines to measure ad effectiveness, forecasting for ad placement inventory, and optimization to match advertiser budgets with customer segments.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Accelerated Retail Media to 30% CAGR at 50% margin.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marketing & Personalization -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Marketing & Personalization</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Omnichannel Personalization</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Generic campaigns sent the same offer to every customer, wasting budget.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Personalization engines determining the right product, offer, and message for each customer at each moment, factoring in purchase history, category affinity, price sensitivity, and inventory position.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Real-time personalization that combines customer intelligence with operational constraints like inventory.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Personalized Offers and Seasonal Campaigns</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>During key retail moments, generic campaigns waste budget. Each customer has different preferences and price sensitivity.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Recommendation system matching customers to offers in real time, factoring in seasonality, promotional calendar, inventory position, and individual purchase history.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Seasonal-aware personalization that adapts to both the calendar and the individual customer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Pharmacy-Grocery Cross-Sell via Data Integration</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Pharmacy and grocery operated as separate businesses. Customer data was siloed, meaning missed cross-sell opportunities.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Unified pharmacy and grocery customer data, connecting prescription behavior with grocery purchasing patterns. Lookalike modeling to identify cross-category opportunities.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Integrating two previously siloed data sources created a richer customer profile than either had independently.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Customer 360 and Churn Prevention</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Customers churn silently. By the time they are "lost," it is too late to intervene.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Unified customer view integrating purchase patterns, service interactions, digital behavior, and sentiment. Next-best-action engine recommending the optimal intervention per customer.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Proactive retention replacing reactive re-engagement with micro-targeted interventions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Multi-Touch Attribution for Marketing ROI</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>ROAS attributes sales to a single touchpoint, missing the full customer journey across multiple channels.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Attribution model that decomposes the contribution of each marketing channel and touchpoint to a conversion, replacing last-click attribution with a full-journey model.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>True multi-channel attribution enabling evidence-based marketing budget allocation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Visual Search for Apparel</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Customers cannot describe visual attributes (drape, cut, pattern, texture) in keywords. Text search fails for fashion.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Computer vision with an attention mechanism that ignores background distractions and matches uploaded images against the product catalog.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Visual understanding replacing keyword search for inherently visual product categories.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generative AI -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Generative AI</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>GenAI Center of Excellence and Governed Platform</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Multiple teams were experimenting with GenAI independently without standards or governance, creating risk and duplicated effort.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>25-person GenAI CoE owning the governed platform, guardrails, and standards. Production use cases across marketing, product content, search, call center, and store operations.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Moved GenAI from experimentation to governed production in under a year.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>GenAI for Marketing Copy Generation</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Marketing teams produce thousands of pieces of copy across dozens of audience segments. Manual copywriting does not scale.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>LLM-powered copy generation integrated into the marketing workflow with brand voice and compliance guardrails enforced automatically.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Automated content generation with built-in brand consistency and compliance checks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>GenAI for Product Image Generation</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Marketing and e-commerce teams need product imagery variations for campaigns and A/B testing. Traditional photography is expensive and slow.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>AI-powered image generation producing product imagery variations (backgrounds, styling, seasonal themes) from existing product photos.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>On-demand product imagery at a fraction of the cost and time of traditional photography.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>GenAI for Product Detail Pages at Scale</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>E-commerce product pages require titles, descriptions, and summaries for 200K+ SKUs. Manual creation is impossible at this scale.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Automated pipelines for SEO-optimized titles, descriptions from structured attributes, feature summaries, and review summaries distilling hundreds of reviews into highlights.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Automated content creation at a scale no human team could match, with SEO optimization built in.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>GenAI for Semantic Search</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>E-commerce search returned irrelevant results for natural language queries because it relied on keyword matching.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>LLM-enhanced search that understands query intent and maps natural language to products, combining keyword search with semantic understanding.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Natural language understanding replacing rigid keyword matching for product discovery.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>GenAI for Call Center Agent Augmentation</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Call center agents spend time searching for policies and crafting responses. Training is expensive and turnover is high.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Real-time AI assistance providing agents with suggested responses, policy lookups, and order context. New agents perform at experienced-agent levels from day one.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Eliminated the performance gap between new and experienced agents through real-time AI assistance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>GenAI Internal Chatbot for Store and Warehouse Employees</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Store and warehouse employees need quick answers to operational questions and currently call a manager or search manuals.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Chatbot on handheld devices answering operational questions from SOPs and policy documents. Bidirectional: employees also report local conditions back to central systems.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Closes the information loop between headquarters and the field, making it bidirectional.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- E-Commerce -->
+    <div class="portfolio-section-header home-fade">
+      <h2>E-Commerce & Digital</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Conversational Commerce (E-Commerce AI Agent)</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Current e-commerce is search-and-filter. Customers with complex needs cannot express their requirements through keyword search.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>AI agent that engages in dialogue, understands the customer's project, recommends products, builds bills of materials, schedules delivery, and processes payment.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Replaced search-and-filter with conversational product discovery for complex, multi-item purchases.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Life Sciences -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Life Sciences</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Life Sciences RFI Copilot</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A contract research organization responds to hundreds of client questionnaires per year, each consuming 50-100+ person-hours. Questions are repetitive but worded differently.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Semantic matching against historical Q&A pairs to produce draft responses with confidence scores and source citations. Client-aware redaction prevents information leakage.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Semantic matching with client-aware redaction, ensuring one client's information never leaks into another's response.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Reagent Label Capture and Lab Inventory</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Warehouse staff manually read vendor labels on reagent bottles. Different forms of the same compound have different identifiers, causing inventory confusion.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Vision AI for bilingual label capture, structured data extraction, storage recommendations, and a knowledge graph mapping compound names to all variant forms.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Knowledge graph resolving chemical compound identity across naming conventions and languages.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Chemistry Report Formatting Engine</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Over 1,000 chemists spend significant time on reports that must conform to patent-standard formats. Each uses a different style.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Locally deployed language model that reformats chemistry reports to the required standard template, preserving all scientific content while standardizing formatting.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>On-premise LLM deployment for data-sovereign environments where cloud APIs are not permitted.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Education</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Personalized Learning Path Engine</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Education technology is content-focused and generic. Students need specific learning paths based on their mastery gaps, not generic courses.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Platform mapping topic dependency graphs, tracking mastery per student per concept, classifying error patterns, and generating personalized learning paths. Teacher dashboard for class and per-student visibility.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Error classification (conceptual vs careless vs time pressure) enabling targeted remediation rather than generic review.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manufacturing -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Manufacturing</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Manufacturing Digital Twin</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Made-to-order factories lose millions in scrap when production falls behind. Every piece is custom, so extras cannot be sold. Managers lack real-time visibility.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Real-time operations platform augmenting ERP, CRM, and MES with production scheduling, machine utilization, scrap analytics, quality tracking, and delivery predictions.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Intelligence layer above existing systems providing the visibility executives need without replacing what works.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Process Engineering Decision Platform</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>EPC projects are document-heavy and fragmented. Engineers spend hours on calculations requiring manual data extraction from PDFs and vendor documents.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>50+ engineering calculation and analytics tools across nine domains, combining deterministic calculations with AI-assisted document extraction and vendor deviation analysis.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Entire 50+ tool suite built in a single sprint using a parallelized development approach.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financial Services -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Financial Services</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Credit Approval Acceleration via ML</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A bank's mortgage and student loan approval process required manual review. High-quality applicants faced the same slow process as complex cases.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>ML models that fast-track high-quality applicants with fewer reviewers while routing complex cases to senior staff. Governance and audit trails built from day one.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Shipped ML models in a regulated banking environment by building governance, documentation, and audit trails from the start.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Relationship-Level Portfolio Analytics</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A bank evaluated each product independently. Some accounts appeared unprofitable in isolation, but account holders brought wealth management, loans, and referrals.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Relationship-level analytics evaluating the entire client relationship across all products, accounts, and referral chains using graph representations.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Transformed decision-making from product-level to relationship-level portfolio thinking.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>FDIC Stress Testing and DFAST Compliance</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Regulated banks must submit stress test results demonstrating capital adequacy under adverse scenarios, under direct regulatory scrutiny.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Quantitative models for scenario analysis, loss estimation across loan portfolios, revenue projection under stress, and capital adequacy analysis meeting regulatory standards.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Operated under direct FDIC scrutiny where every model decision must be documented, validated, and defensible.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Custom Derivatives and Structured Solutions</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Corporates faced complex, multi-dimensional risk exposures across currencies, commodities, interest rates, and equity that standard products could not address.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Bespoke structured solutions pairing simulation engines with hedging strategies and capital-efficient vehicles, custom to each client's risk profile.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Translated complex multi-asset correlated risk into products that C-suite executives could understand. $10M+ in direct value.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Balance Sheet Simulation and C-Suite Advisory</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Corporate treasurers and CFOs needed to understand the impact of market movements on balance sheets, pension obligations, and hedging positions.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Balance-sheet simulation and scenario analysis engines translating complex models into board-level decision tools for capital allocation and M&A valuation.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Quantitative models made accessible as board-level decision tools shaping billion-dollar capital allocation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Treasury Management Advisory</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Corporate treasury functions needed to optimize cash management, liquidity positioning, and investment of surplus funds across global operations.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Quantitative models for cash flow forecasting, liquidity buffer sizing, investment portfolio construction, and FX exposure management across subsidiaries.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>End-to-end treasury optimization from cash forecasting through investment and FX management.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enterprise Strategy -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Enterprise Strategy & Transformation</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Board-Level Enterprise AI Strategy</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A company needed a clearly articulated AI transformation strategy aligned with the board, covering prioritization, governance, and investment.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Enterprise AI strategy presented to the board covering portfolio prioritization, governance framework, investment criteria, and measurable KPIs.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Translated AI capabilities and limitations into language the board could use for capital allocation and risk management.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Enterprise AI Vision for Acquisition-Driven Distributor</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A large distributor growing through acquisitions needed to unify AI and data strategy for rapid integration of acquired companies.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Enterprise AI and data vision centralizing governance and integrating supply chain, pricing, and sales analytics with standardized integration playbooks.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Aligned M&A strategy with AI capabilities, creating repeatable integration playbooks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Experimentation Center of Excellence</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>An enterprise lacked centralized experimentation. Teams ran tests without statistical rigor, leading to false conclusions.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Experimentation CoE responsible for enterprise-wide A/B testing methodology, experiment design, statistical analysis, and incrementality measurement.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Replaced ad-hoc testing with rigorous, enterprise-wide experimentation standards.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Enterprise Decision Intelligence</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Large enterprises suffer from siloed data where requests get diluted through management layers, producing locally optimal but globally suboptimal decisions.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Integrated decision platform connecting data across business functions for unified, enterprise-wide decision-making.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Cross-functional data integration replacing siloed optimization with enterprise-wide decision support.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Cross-Functional Analytics Teams Embedded in Business Units</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>A bank needed to scale its premium client service model. Analytics insights were not reaching the people making daily decisions.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Embedded cross-functional data teams in every major business unit with decision tools tailored to each function's workflows.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Embedded data people directly in business functions so insights became part of daily decisions, not periodic reports.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technology -->
+    <div class="portfolio-section-header home-fade">
+      <h2>Technology & Infrastructure</h2>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Multi-Agent Development Pipeline</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Traditional software development is serial and slow. AI agents can plan, build, review, and ship in parallel, but need governance for quality.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Parallelized pipeline where an AI architect produces specifications, multiple AI workers build in parallel, and an AI reviewer validates before integration.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>50+ production-quality tools delivered in a single sprint. Engineering throughput multiplied without sacrificing quality.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Core Banking Platform</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Small and medium-sized financial institutions lack access to modern core banking systems that handle their specific operational and regulatory needs.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Core banking platform with double-entry ledger, loan management, member shares, fixed deposits, regulatory reporting, and full accounting suite.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>Modern core banking built for underserved small and medium financial institutions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card home-fade">
+      <div class="portfolio-card-header" onclick="this.parentElement.classList.toggle('open')">
+        <h3>Formal Verification and Chip Design</h3>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-content">
+          <div class="detail-label">Business Case</div>
+          <p>Semiconductor companies needed mathematical proof that chip designs were correct before committing to fabrication, where a single bug costs millions.</p>
+          <div class="detail-label">Technology Solution</div>
+          <p>Verification tools and algorithms for proving correctness of chip designs. 8 granted patents.</p>
+          <div class="detail-label">Innovation Highlight</div>
+          <p>A decade of deep work in formal methods, mathematical logic, and verification. Demonstrates the ability to solve hard mathematical problems in industrial settings.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="home-contact" style="padding:4rem 2rem;text-align:center">
+    <a class="cta" href="/#contact">Let's discuss your AI challenges</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025-2026 Summit AI Group</p>
+  </footer>
+
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('home-in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.home-fade').forEach(function(el) { observer.observe(el); });
+      document.querySelectorAll('.home-hero-fade').forEach(function(el, i) {
+        setTimeout(function() { el.classList.add('home-in-view'); }, 250 + i * 130);
+      });
+    })();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

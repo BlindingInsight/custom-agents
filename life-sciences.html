@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Life Sciences | Custom AI Agents</title>
+  <meta name="description" content="Enterprise AI solutions for life sciences: RFI copilot, reagent label capture, chemistry report automation. Deployed at contract research organizations.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="home-page">
+
+  <nav class="home-nav" id="home-nav">
+    <div class="logo"><a href="/" style="color:inherit;text-decoration:none">Custom AI Agents</a></div>
+    <div class="home-nav-links">
+      <a href="/">Home</a>
+      <a href="/experience.html">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="home-hero" style="min-height:40vh;padding-top:8rem">
+    <canvas id="home-particles"></canvas>
+    <div class="home-hero-glow"></div>
+    <div class="home-hero-content">
+      <div class="home-hero-eyebrow home-hero-fade">Life Sciences</div>
+      <h1 class="home-hero-title home-hero-fade">AI that knows the science,<br>not just the data.</h1>
+      <p class="home-hero-sub home-hero-fade">
+        RFI automation, reagent label capture, and chemistry report standardization. Built for the specific constraints of regulated scientific environments.
+      </p>
+    </div>
+  </section>
+
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>Document Intelligence</h2>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>RFI Copilot</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>A contract research organization responds to hundreds of client questionnaires per year, each consuming 50-100+ person-hours. Questions are repetitive but worded differently by each client.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Semantic matching against historical Q&A pairs to produce draft responses with confidence scores and source citations. Client-aware redaction prevents information leakage across clients.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Chemistry Report Formatting Engine</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>Over 1,000 chemists spend significant time on reports that must conform to patent-standard formats. Each chemist uses a different style, and review is manual.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Locally deployed language model that reformats chemistry reports to the required standard template, preserving all scientific content while standardizing formatting and language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>Lab Operations</h2>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Reagent Label Capture and Lab Inventory</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>Warehouse staff manually read vendor labels on reagent bottles to capture chemical data and determine storage conditions. Different forms of the same compound have different identifiers.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Vision AI for bilingual label capture, structured data extraction, storage recommendations, and a knowledge graph mapping compound names to all variant forms. Integrates with existing inventory systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>Drug Design &amp; Discovery</h2>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>ML Models for Drug Design Across the Pipeline</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>Drug discovery is a multi-year process where most candidate molecules fail. Scientists need to predict which molecules will succeed before committing to expensive wet lab experiments.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>ML models spanning the full pipeline: PK-PD prediction, toxicity screening, synthesizability assessment, and ADME property prediction. Scientists evaluate candidates holistically rather than checking each property separately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-contact" style="padding:4rem 2rem;text-align:center">
+    <a class="cta" href="/#contact">Let's discuss your life sciences AI challenges</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025-2026 Summit AI Group</p>
+  </footer>
+
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('home-in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.home-fade').forEach(function(el) { observer.observe(el); });
+      document.querySelectorAll('.home-hero-fade').forEach(function(el, i) {
+        setTimeout(function() { el.classList.add('home-in-view'); }, 250 + i * 130);
+      });
+    })();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

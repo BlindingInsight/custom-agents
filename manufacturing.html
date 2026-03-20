@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Manufacturing | Custom AI Agents</title>
+  <meta name="description" content="Enterprise AI solutions for manufacturing: digital twins, production scheduling, scrap analytics, quality tracking, and delivery predictions.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="home-page">
+
+  <nav class="home-nav" id="home-nav">
+    <div class="logo"><a href="/" style="color:inherit;text-decoration:none">Custom AI Agents</a></div>
+    <div class="home-nav-links">
+      <a href="/">Home</a>
+      <a href="/experience.html">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="home-hero" style="min-height:40vh;padding-top:8rem">
+    <canvas id="home-particles"></canvas>
+    <div class="home-hero-glow"></div>
+    <div class="home-hero-content">
+      <div class="home-hero-eyebrow home-hero-fade">Manufacturing</div>
+      <h1 class="home-hero-title home-hero-fade">Intelligence where it matters:<br>on the factory floor.</h1>
+      <p class="home-hero-sub home-hero-fade">
+        Real-time production intelligence, digital twins, and scheduling optimization. Built for made-to-order complexity.
+      </p>
+    </div>
+  </section>
+
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>Production Intelligence</h2>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Manufacturing Digital Twin</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>Made-to-order factories lose millions in scrap when production falls behind schedule. Every piece is custom, so extras cannot be sold. Managers lack real-time visibility into job status and bottlenecks.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Real-time operations platform augmenting existing systems (ERP, CRM, MES) with production scheduling, machine utilization, scrap analytics, quality tracking, and delivery predictions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-contact" style="padding:4rem 2rem;text-align:center">
+    <a class="cta" href="/#contact">Let's discuss your manufacturing AI challenges</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025-2026 Summit AI Group</p>
+  </footer>
+
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('home-in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.home-fade').forEach(function(el) { observer.observe(el); });
+      document.querySelectorAll('.home-hero-fade').forEach(function(el, i) {
+        setTimeout(function() { el.classList.add('home-in-view'); }, 250 + i * 130);
+      });
+    })();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

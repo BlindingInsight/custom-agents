@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Engineering & Construction | Custom AI Agents</title>
+  <meta name="description" content="Decision intelligence for engineering, procurement, and construction projects. 50+ engineering calculation and analytics tools across nine domains.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="home-page">
+
+  <nav class="home-nav" id="home-nav">
+    <div class="logo"><a href="/" style="color:inherit;text-decoration:none">Custom AI Agents</a></div>
+    <div class="home-nav-links">
+      <a href="/">Home</a>
+      <a href="/experience.html">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="home-hero" style="min-height:40vh;padding-top:8rem">
+    <canvas id="home-particles"></canvas>
+    <div class="home-hero-glow"></div>
+    <div class="home-hero-content">
+      <div class="home-hero-eyebrow home-hero-fade">Engineering & Construction</div>
+      <h1 class="home-hero-title home-hero-fade">Decision intelligence<br>for complex projects.</h1>
+      <p class="home-hero-sub home-hero-fade">
+        50+ engineering calculation and analytics tools across nine domains. Deterministic calculations combined with AI-assisted document extraction.
+      </p>
+    </div>
+  </section>
+
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>Engineering Decision Platform</h2>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Process Engineering Decision Platform</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>EPC projects are document-heavy and fragmented across discipline-specific tools. Engineers spend hours on calculations that follow known formulas but require manual data extraction from PDFs, spreadsheets, and vendor documents.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Decision-making layer above engineering tools for oil and gas and process industry projects. 50+ tools across nine domains, each combining deterministic calculations with AI-assisted document extraction and vendor deviation analysis.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Impact</span>
+          <p><strong>Entire 50+ tool suite built in a single sprint</strong> using a parallelized development approach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-contact" style="padding:4rem 2rem;text-align:center">
+    <a class="cta" href="/#contact">Let's discuss your engineering AI challenges</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025-2026 Summit AI Group</p>
+  </footer>
+
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('home-in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.home-fade').forEach(function(el) { observer.observe(el); });
+      document.querySelectorAll('.home-hero-fade').forEach(function(el, i) {
+        setTimeout(function() { el.classList.add('home-in-view'); }, 250 + i * 130);
+      });
+    })();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

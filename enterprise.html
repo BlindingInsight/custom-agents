@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Strategy & Transformation | Custom AI Agents</title>
+  <meta name="description" content="Enterprise AI strategy, acquisition integration, experimentation centers of excellence, decision intelligence, and embedded analytics teams.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="home-page">
+
+  <nav class="home-nav" id="home-nav">
+    <div class="logo"><a href="/" style="color:inherit;text-decoration:none">Custom AI Agents</a></div>
+    <div class="home-nav-links">
+      <a href="/">Home</a>
+      <a href="/experience.html">Experience</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="home-hero" style="min-height:40vh;padding-top:8rem">
+    <canvas id="home-particles"></canvas>
+    <div class="home-hero-glow"></div>
+    <div class="home-hero-content">
+      <div class="home-hero-eyebrow home-hero-fade">Enterprise Strategy</div>
+      <h1 class="home-hero-title home-hero-fade">From AI strategy<br>to working software.</h1>
+      <p class="home-hero-sub home-hero-fade">
+        Board-level AI strategy, acquisition integration, experimentation CoEs, decision intelligence, and embedded analytics teams. Strategy that ships.
+      </p>
+    </div>
+  </section>
+
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>Strategy & Governance</h2>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Board-Level Enterprise AI Strategy</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>A company needed a clearly articulated AI transformation strategy aligned with the board, covering prioritization, governance, and investment across all functions.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Enterprise AI strategy presented to the board covering portfolio prioritization, governance framework, investment criteria, and measurable KPIs for AI adoption.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Enterprise AI Vision for Acquisition-Driven Distributor</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>A large distributor growing through acquisitions needed to unify AI and data strategy so each acquired company could be rapidly integrated.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Enterprise AI and data vision centralizing governance and integrating supply chain, pricing, and sales analytics under a unified roadmap with standardized integration playbooks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-case-study">
+    <div class="home-section-header home-fade">
+      <h2>Organizational Capability</h2>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Experimentation Center of Excellence</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>An enterprise lacked a centralized approach to experimentation. Teams ran tests without statistical rigor, leading to false conclusions and wasted spend.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Experimentation CoE responsible for enterprise-wide A/B testing methodology, experiment design, statistical analysis, and incrementality measurement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Enterprise Decision Intelligence</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>Large enterprises suffer from siloed data where business requests get diluted through management layers, leading to locally optimized decisions instead of globally optimal ones.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Integrated decision platform connecting data across business functions so leadership gets a unified view for enterprise-wide decision-making.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-case-card home-fade">
+      <h3>Cross-Functional Analytics Teams Embedded in Business Units</h3>
+      <div class="home-case-details">
+        <div class="home-case-detail">
+          <span class="home-case-tag">Problem</span>
+          <p>A bank needed to scale its premium client service model through data and technology. Analytics insights were not reaching the people who make daily decisions.</p>
+        </div>
+        <div class="home-case-detail">
+          <span class="home-case-tag">Solution</span>
+          <p>Embedded cross-functional data teams in every major business unit, paired with decision tools tailored to each function's workflows. Insights became part of daily decisions rather than periodic reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-contact" style="padding:4rem 2rem;text-align:center">
+    <a class="cta" href="/#contact">Let's discuss your enterprise AI strategy</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025-2026 Summit AI Group</p>
+  </footer>
+
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('home-in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.home-fade').forEach(function(el) { observer.observe(el); });
+      document.querySelectorAll('.home-hero-fade').forEach(function(el, i) {
+        setTimeout(function() { el.classList.add('home-in-view'); }, 250 + i * 130);
+      });
+    })();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
