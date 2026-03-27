@@ -57,6 +57,12 @@ const OFFLINE_HTML = `<!DOCTYPE html>
 </body>
 </html>`;
 
+// Headers that must not be forwarded between hops (RFC 2616 Section 13.5.1)
+const HOP_BY_HOP = [
+  'connection', 'keep-alive', 'proxy-authenticate', 'proxy-authorization',
+  'te', 'trailers', 'transfer-encoding',
+];
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -76,9 +82,21 @@ export default {
 
     // Build proxy request to Tailscale Funnel
     const target = new URL(url.pathname + url.search, env.FUNNEL_URL);
+    const isWebSocket = request.headers.get('Upgrade') === 'websocket';
 
     const headers = new Headers(request.headers);
+    HOP_BY_HOP.forEach(h => headers.delete(h));
     headers.set('X-Forwarded-Host', hostname);
+
+    const clientIp = request.headers.get('CF-Connecting-IP');
+    if (clientIp) {
+      headers.set('X-Forwarded-For', clientIp);
+    }
+
+    // Preserve Upgrade header for WebSocket handshake (stripped above with hop-by-hop)
+    if (isWebSocket) {
+      headers.set('Upgrade', 'websocket');
+    }
 
     const proxyInit = {
       method: request.method,
@@ -89,19 +107,37 @@ export default {
 
     try {
       // WebSocket upgrade: pass through directly (Cloudflare handles the upgrade)
-      if (request.headers.get('Upgrade') === 'websocket') {
-        return fetch(target.toString(), proxyInit);
+      if (isWebSocket) {
+        return await fetch(target.toString(), proxyInit);
       }
 
       const resp = await fetch(target.toString(), proxyInit);
+
+      // Rewrite Location header on redirects to use the public hostname
+      const respHeaders = new Headers(resp.headers);
+      if (resp.status >= 300 && resp.status < 400) {
+        const location = resp.headers.get('Location');
+        if (location) {
+          try {
+            const loc = new URL(location);
+            loc.hostname = hostname;
+            loc.port = '';
+            loc.protocol = 'https:';
+            respHeaders.set('Location', loc.toString());
+          } catch {
+            // Relative URLs are fine as-is
+          }
+        }
+      }
 
       // Stream the response body through without buffering (supports SSE)
       return new Response(resp.body, {
         status: resp.status,
         statusText: resp.statusText,
-        headers: resp.headers,
+        headers: respHeaders,
       });
-    } catch {
+    } catch (err) {
+      console.error('Proxy fetch failed:', err?.message ?? err);
       return new Response(OFFLINE_HTML, {
         status: 503,
         headers: { 'Content-Type': 'text/html; charset=utf-8' },
