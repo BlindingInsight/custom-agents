@@ -1,0 +1,10 @@
+name = "demo-proxy"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+account_id = "$CLOUDFLARE_ACCOUNT_ID"
+
+[vars]
+FUNNEL_URL = "https://subbuk-lg.tail54f91.ts.net:9000"
+
+[[routes]]
+pattern = "*.summitaigroup.com/*"
