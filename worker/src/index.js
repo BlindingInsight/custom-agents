@@ -82,7 +82,7 @@ export default {
 
     // Build proxy request to Tailscale Funnel
     const target = new URL(url.pathname + url.search, env.FUNNEL_URL);
-    const isWebSocket = request.headers.get('Upgrade') === 'websocket';
+    const isWebSocket = request.headers.get('Upgrade')?.toLowerCase() === 'websocket';
 
     const headers = new Headers(request.headers);
     HOP_BY_HOP.forEach(h => headers.delete(h));
@@ -113,8 +113,11 @@ export default {
 
       const resp = await fetch(target.toString(), proxyInit);
 
-      // Rewrite Location header on redirects to use the public hostname
+      // Strip hop-by-hop headers from the upstream response
       const respHeaders = new Headers(resp.headers);
+      HOP_BY_HOP.forEach(h => respHeaders.delete(h));
+
+      // Rewrite Location header on redirects to use the public hostname
       if (resp.status >= 300 && resp.status < 400) {
         const location = resp.headers.get('Location');
         if (location) {
