@@ -5,7 +5,7 @@ compatibility_date = "2025-09-01"
 # account_id is read from CLOUDFLARE_ACCOUNT_ID env var at deploy time
 
 [vars]
-FUNNEL_URL = "https://subbuk-lg.tail54f91.ts.net:9000"
+FUNNEL_URL = "https://subbuk-lg.tail54f91.ts.net"
 
 [[routes]]
 pattern = "*.summitaigroup.com/*"
