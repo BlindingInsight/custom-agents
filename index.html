@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>custom-agents.ai</title>
   <style>
-    body{font-family:system-ui,-apple-system,sans-serif;max-width:680px;margin:12vh auto;padding:0 24px;line-height:1.65;color:#161616}
+    body{font-family:system-ui,-apple-system,sans-serif;max-width:680px;margin:10vh auto;padding:0 24px;line-height:1.65;color:#161616}
     h1{font-size:2rem;margin-bottom:.25rem}
     .tag{color:#555;font-size:1.05rem;margin-top:0}
     strong{color:#0a7a4f}
     a{color:#0a7a4f;text-decoration:none}
+    form{margin:1.5rem 0 .5rem;display:flex;flex-direction:column;gap:.6rem;max-width:380px}
+    label{font-size:.9rem;color:#333}
+    input{width:100%;padding:.55rem .6rem;border:1px solid #ccc;border-radius:6px;font-size:1rem}
+    button{margin-top:.4rem;padding:.6rem 1rem;background:#0a7a4f;color:#fff;border:0;border-radius:6px;font-size:1rem;cursor:pointer}
     .soon{color:#777;margin-top:2rem;font-size:.95rem}
   </style>
 </head>
@@ -17,7 +21,14 @@
   <h1>custom-agents.ai</h1>
   <p class="tag">A next-generation consulting firm.</p>
   <p>We are building a marketplace where you hire a <strong>human paired with an AI agent</strong>, not a headcount and not just software. A professional who operates and supervises an AI agent that amplifies their work, accountable and on demand.</p>
-  <p>Talent comes from our AI-agents bootcamp; graduates offer their services here.</p>
-  <p class="soon">Coming soon. In the meantime, see <a href="https://summitaigroup.com">summitaigroup.com</a>.</p>
+  <p>We also run an AI-agents bootcamp to get your skills ready to be featured in this marketplace. Want to know more? Leave your details and we will be in touch.</p>
+  <form action="https://formspree.io/f/mvgbolpa" method="POST">
+    <input type="hidden" name="site" value="custom-agents.ai">
+    <input type="hidden" name="_subject" value="custom-agents.ai — bootcamp / marketplace interest">
+    <label>Name<input type="text" name="name" required></label>
+    <label>Email<input type="email" name="email" required></label>
+    <button type="submit">Keep me posted</button>
+  </form>
+  <p class="soon">More soon. In the meantime, see <a href="https://summitaigroup.com">summitaigroup.com</a>.</p>
 </body>
 </html>
